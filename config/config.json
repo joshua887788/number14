@@ -3,21 +3,27 @@
     "username": "root",
     "password": "Sammy7788!",
     "database": "database_development",
-    "host": "localhost",
-    "dialect": "mysql"
+    "host": "127.0.0.1",
+    "dialect": "mysql",
+    "port": 3306
   },
   "test": {
     "username": "root",
     "password": "Sammy7788!",
     "database": "database_test",
-    "host": "localhost",
-    "dialect": "mysql"
+    "host": "127.0.0.1",
+    "dialect": "mysql",
+    "port": 3306
   },
   "production": {
-    "username": "root",
-    "password": "Sammy7788!",
-    "database": "database_production",
-    "host": "localhost",
-    "dialect": "mysql"
+    "use_env_variable": "JAWSDB_URL",
+    "fallback": {
+      "username": "root",
+      "password": "Sammy7788!",
+      "database": "database_production",
+      "host": "127.0.0.1",
+      "dialect": "mysql",
+      "port": 3306
+    }
   }
 }

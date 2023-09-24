@@ -3,6 +3,7 @@ const exphbs = require('express-handlebars');
 const app = express();
 app.engine('handlebars', exphbs.engine);
 app.set('view engine', 'handlebars');
+require('dotenv').config();
 
 
 const userRoutes = require('./controllers/userController');
@@ -27,11 +28,13 @@ app.use(express.json());
 app.use('/users', userRoutes);
 app.use('/posts', postRoutes);
 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3306;
 app.listen(PORT, () => {
     console.log(`Server is running on http://localhost:${PORT}`);
-});
- 
+}
+);
+
+
 
 
 

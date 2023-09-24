@@ -33,3 +33,4 @@ db.sequelize = sequelize;
 
 
 module.exports = db;
+
