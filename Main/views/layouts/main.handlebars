@@ -1,0 +1,46 @@
+
+
+<html lang='en'>
+
+	<head>
+		<meta charset='UTF-8' />
+		<meta name='viewport' content='width=device-width, initial-scale=1.0' />
+		<title>Blog about nothing</title>
+		<link rel='stylesheet' href='/css/jass.css' />
+	</head>
+
+	<body>
+
+		<nav>
+			<ul>
+				<li class='li-inline nav-item'><a href='/'>Homepage</a></li>
+				{{#if logged_in}}
+					<li class='li-inline nav-item'><a href='/dashboard'>Dash</a></li>
+					<li class='li-inline nav-item'><a
+							href='#'
+							class='btn'
+							id='logout'
+						>Logout here</a></li>
+				{{else}}
+					<li class='li-inline nav-item'><a href='/login'>Login</a></li>
+				{{/if}}	
+			</ul>
+		</nav>
+
+		<header class='display-flex justify-space-between align-center p-2'>
+			<h1>
+				<a href='/'>Blog about nothing</a>
+			</h1>
+		</header>
+
+		<main>
+			{{{body}}}
+		</main>
+		<footer>
+			&copy; Blog about nothing
+		</footer>
+
+	</body>
+</html>
+
+<script src='/js/logout.js'></script>
